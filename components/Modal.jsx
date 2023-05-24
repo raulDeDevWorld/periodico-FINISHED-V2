@@ -62,7 +62,7 @@ export default function Error({ key, rute, carpeta, item, i, post, topic, close 
             const object = { [fileName]: { ...userDB[topic].Posts[`PostImage_${i}`], fecha: newDate.toString(), description: data.descriptionPost ? data.descriptionPost : userDB[topic].Posts[`PostImage_${i}`].description, enlace: data.enlacePost ? data.enlacePost : userDB[topic].Posts[`PostImage_${i}`].enlace, objectFit: data.objectPositionPost ? data.objectPositionPost : userDB[topic].Posts[`PostImage_${i}`].objectFit } }
             writeUserData(ruteDB, object, setUserSuccess, setUserData)
             postImage && uploadIMG(ruteDB, ruteSTG, fileName, postImage, setUserSuccess, monthYear, isCheckedComp)
-        }
+        }      
     }
 
     function remove(e, key) {
