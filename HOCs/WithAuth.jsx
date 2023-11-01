@@ -10,7 +10,7 @@ export function WithAuth(Component) {
         const router = useRouter()
 
         useEffect(() => {
-            let d = date ? date :  `${new Date()}`
+            let d = date ? date :  new Date().getTime()
 
             onAuth(setUserProfile, setUserData, postsIMG, setUserPostsIMG, setUserDate, setUserMonthAndYear, setUserDayMonthYear, monthAndYear)
             getIndexData(setUserData, d)
