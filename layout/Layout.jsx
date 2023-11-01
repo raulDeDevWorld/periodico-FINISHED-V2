@@ -83,7 +83,7 @@ function Layout({ children }) {
                             <img src="/contact.svg" alt="" />
                             <p>(+591) 2 488973 <br /> 73002076 <br />60101760</p>
                             <img src="/ubication.svg" alt="" />
-                            <p>Calle Cañada Strongest, <br /> No. 1782 esq. Capitán Castrillo, <br /> Edif. Napolis, Piso 4, Of. 6B <br /> Zona San Pedro</p>
+                            <p>Calle Cañada Strongest, <br /> No. 1782 esq. Capitán Castrillo, <br /> Edif. Napolis, Piso 4, Of. 4B <br /> Zona San Pedro</p>
                         </div>
 
                     </div>
