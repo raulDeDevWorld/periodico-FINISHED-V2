@@ -9,7 +9,7 @@ export function WithoutAuth(Component) {
         const { user, userDB, setUserProfile, setUserData, postsIMG, setUserPostsIMG, setUserDate, date, setUserMonthAndYear, setUserDayMonthYear, monthAndYear} = useUser()
         const router = useRouter()
         useEffect(() => {
-            let d = date ? date : `${new Date()}`
+            let d = date ? date : new Date().getTime()
             onAuth(setUserProfile, setUserData, postsIMG, setUserPostsIMG, setUserDate, setUserMonthAndYear, setUserDayMonthYear, monthAndYear)
             getIndexData(setUserData, d)
         }, [date, user,]);
@@ -17,7 +17,7 @@ export function WithoutAuth(Component) {
         return (
             <>
                 {userDB == '' && <Loader />}
-                {userDB !== "" && postsIMG !== {} && <Component {...arguments} />}
+                {userDB !== "" && <Component {...arguments} />}
             </>
         )
     }
