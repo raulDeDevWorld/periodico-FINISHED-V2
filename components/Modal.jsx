@@ -59,7 +59,7 @@ export default function Error({ key, rute, carpeta, item, i, post, topic, close 
             const ruteDB = `/${topic}/Posts` // Nov-2022/Inicio
             const ruteSTG = `${topic}` // Nov-2022/
             const fileName = `PostImage_${i}` // PostImage_Tue Nov 15 2022 
-            const object = { [fileName]: { ...userDB[topic].Posts[`PostImage_${i}`], fecha: newDate.toString(), description: data.descriptionPost ? data.descriptionPost : userDB[topic].Posts[`PostImage_${i}`].description, enlace: data.enlacePost ? data.enlacePost : userDB[topic].Posts[`PostImage_${i}`].enlace, objectFit: data.objectPositionPost ? data.objectPositionPost : userDB[topic].Posts[`PostImage_${i}`].objectFit } }
+            const object = { [fileName]: { ...userDB[topic].Posts[`PostImage_${i}`], fecha: newDate, description: data.descriptionPost ? data.descriptionPost : userDB[topic].Posts[`PostImage_${i}`].description, enlace: data.enlacePost ? data.enlacePost : userDB[topic].Posts[`PostImage_${i}`].enlace, objectFit: data.objectPositionPost ? data.objectPositionPost : userDB[topic].Posts[`PostImage_${i}`].objectFit } }
             writeUserData(ruteDB, object, setUserSuccess, setUserData)
             postImage && uploadIMG(ruteDB, ruteSTG, fileName, postImage, setUserSuccess, monthYear, isCheckedComp)
         }      
