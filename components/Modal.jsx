@@ -54,7 +54,7 @@ export default function Error({ key, rute, carpeta, item, i, post, topic, close 
         e.preventDefault()
 
         const monthYear = monthAndYear ? monthAndYear : getMonthAndYear()
-        const newDate = new Date()
+        const newDate = new Date().getTime()
         if (key == "SavePost") {
             const ruteDB = `/${topic}/Posts` // Nov-2022/Inicio
             const ruteSTG = `${topic}` // Nov-2022/
