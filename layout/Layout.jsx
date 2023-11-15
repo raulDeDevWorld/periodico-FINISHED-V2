@@ -124,8 +124,8 @@ function Layout({ children }) {
                             <a onClick={handlerClick}> <span> ©TARKAN Ltda.</span></a>
 
                         </Link>
-                        <Link href="https://swoou.vercel.app" legacyBehavior scroll={false}>
-                            <a onClick={handlerClick}> <span> Desarrollado por Swoou.vercel.app</span></a>
+                        <Link href="https://swoou.com/" legacyBehavior scroll={false}>
+                            <a onClick={handlerClick}> <span> Desarrollado por swoou.com</span></a>
                         </Link>
 
                     </div>
