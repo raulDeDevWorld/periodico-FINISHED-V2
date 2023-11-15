@@ -47,7 +47,7 @@ function TemplateSix({ color, topic, banner }) {
                     <>
                         {userDB[topic]["Posts"] && userDB[topic]["Posts"][`PostImage_${i}`] && userDB[topic]["Posts"][`PostImage_${i}`].state !== undefined && userDB[topic]["Posts"][`PostImage_${i}`].state === 'Publicado' && router.pathname !== "/Admin" &&
 
-                            <div key={index} >
+                            <div key={index} onClick={()=>router.push(userDB[topic]["Posts"][`PostImage_${i}`]['enlace'] ? userDB[topic]["Posts"][`PostImage_${i}`]['enlace'] : '')}>
                                 {userDB[topic]["Posts"][`PostImage_${i}`]['content'] ? '' : <span className={styles.inDevelop}>{router.pathname !== "/Admin" && ''}</span>}
                                 {router.pathname == "/Admin" && <span className={styles.datePost} onClick={() => handlerClickEnlace({ i, carpeta: 'Post' })}>{`${new Date(userDB[topic].Posts[`PostImage_${i}`].fecha).getDate()}-${months[new Date(userDB[topic].Posts[`PostImage_${i}`].fecha).getMonth()]} ${new Date(userDB[topic].Posts[`PostImage_${i}`].fecha).getHours()}:${new Date(userDB[topic].Posts[`PostImage_${i}`].fecha).getMinutes()}`}</span>}
 
